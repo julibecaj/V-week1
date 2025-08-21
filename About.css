@@ -3,3 +3,43 @@
     color: #5f2eea;
     padding: 60px;
 }
+
+#About h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.about-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.about-flex p {
+    flex: 2;
+    font-size: 18px;
+    color: #5f2eea;
+    margin: 0;
+}
+
+.about-flex .pic-img {
+    flex: 1;
+    width: 200px;
+    max-width: 100%;
+    border-radius: 20px;
+}
+
+#About .pic-img {
+    opacity: 0;
+    transform: scale(0.8);
+    animation: popIn 0.7s forwards;
+    animation-delay: 0.2s;
+}
+
+@keyframes popIn {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
