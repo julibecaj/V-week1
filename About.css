@@ -7,6 +7,12 @@
 #About h2 {
     text-align: center;
     margin-bottom: 40px;
+    font-size: 2.2rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; 
 }
 
 .about-flex {

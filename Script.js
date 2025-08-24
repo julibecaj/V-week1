@@ -8,16 +8,28 @@ const quotes = [
     "Dream it. Wish it. Do it."
 ];
 
-const btns = document.querySelectorAll('.btns button'); /**checking all the buttons */
-
-/**since the buttons arent named checking first and second button by index */
-
-btns[0].addEventListener('click', function() {
+// Target buttons by ID
+document.getElementById('free-quote-btn').addEventListener('click', function() {
     const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
     alert(randomQuote);
 });
 
-
-btns[1].addEventListener('click', function() {
+document.getElementById('contact-btn').addEventListener('click', function() {
     alert('Contacting the team...');
+});
+
+
+/**the toggle menu */
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+});
+
+/**when link cliked closes menu */
+navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('show');
+    });
 });
