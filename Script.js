@@ -33,3 +33,14 @@ navLinks.querySelectorAll('a').forEach(link => {
         navLinks.classList.remove('show');
     });
 });
+
+document.querySelectorAll('.collage-item').forEach(item => {
+    item.addEventListener('click', function() {
+        // Collapse other expanded cards
+        document.querySelectorAll('.collage-item.expanded').forEach(card => {
+            if (card !== item) card.classList.remove('expanded');
+        });
+        // Toggle this card
+        item.classList.toggle('expanded');
+    });
+});
